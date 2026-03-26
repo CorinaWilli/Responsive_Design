@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="de">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bob, the Square Swimmer a Scrollytelling to dive in</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overwave&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+
+
+<body>
+
+    <!-- Hintergrundbild für Parallax-Effekt -->
+    <div class="parallax-bg" id="bg"></div>
+    <!-- Bubble-Bilder BG -->
+    <div id="bubbleLayer" aria-hidden="true"></div>
+    <!-- Audio per Button ein/aus -->
+    <audio id="bgAudio" src="underwater-bubble.MP3" loop preload="auto"></audio>
+
+
+
+    <!-- Header -->
+    <header class="main-header">
+        <button id="soundBtn" class="icon-button" aria-label="Ton einschalten" aria-pressed="false">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+                <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z" />
+            </svg>
+        </button>
+
+        <button class="menu-toggle icon-button" id="menuBtn" aria-expanded="false" aria-controls="navMenu"
+            aria-label="Menü öffnen">
+            <div><span></span><span></span><span></span></div>
+        </button>
+    </header>
+
+    <!-- Fix Gradient-->
+    <div class="fix-fade top"></div>
+    <div class="fix-fade bottom"></div>
+
+    <nav class="nav-overlay" id="navMenu">
+        <ul>
+            <li><a href="#shape">shape</a></li>
+            <li><a href="#skeleton">skeleton</a></li>
+            <li><a href="#lifestyle">lifestyle</a></li>
+        </ul>
+    </nav>
+
+
+
+    <!-- Hauptinhalt -->
+    <main>
+        <section id="intro">
+            <div class="intro-content">
+                <h1 class="title">Bob, the <br> square swimmer</h1>
+
+                <div class="bob-container">
+                    <img src="Bob-Hero.png" alt="Bob the boxfish" class="bob-img">
+                    <div class="hero-bubble-layer" aria-hidden="true"></div>
+                </div>
+
+                <div class="info-box-db">
+                    <p>He's not round, he's not flat... He's shaped like a box, because he's a box fish!</p>
+                </div>
+
+                <div class="info-box-db">
+                    <p>Want to get to know Bob? Let's start!</p>
+                </div>
+            </div>
+
+            <div class="scroll-dive">
+                <p>Scroll to dive in</p>
+                <svg class="scroll-arrow" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M12 16l-6-6h12z" />
+                </svg>
+            </div>
+            <button id="backToTop" class="icon-button back-to-top hidden" aria-label="Zurück zum Hero">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 8v8" />
+                    <path d="M6 12l6-6 6 6" />
+                </svg>
+            </button>
+        </section>
+
+        <section id="shape">
+            <div class="intro-content">
+                <div class="info-box-y">
+                    <p>Looks clunky? Not at all! Bob's shape is an aerodynamic work of art..</p>
+                </div>
+
+                <div class="img-block shape-Bob">
+                    <img src="shape-Bob.png" alt="Bob from the side">
+                </div>
+
+                <div class="info-box-y">
+                    <p>His shape was even used by Mercedes in 2005 as inspiration for the Bionic Car, due to his
+                        particularly low drag coefficient (cw value = 0.06) and maneuverability.</p>
+                </div>
+                <div class="info-box-y abstand-mittel">
+                    <p>Isn't that cool?</p>
+                </div>
+
+                <div class="img-block">
+                    <img src="shape-mercedes-bionic-car.png" alt="Bionic Car form Mercedes on the road">
+                </div>
+
+                <div class="info-box-y abstand-gross">
+                    <p>Wait there's more that makes Bob special!</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skeleton">
+            <div class="intro-content">
+                <div class="info-box-db">
+                    <p>Bob is also extremely stable thanks to his shape!</p>
+                </div>
+
+                <div class="img-block skeleton">
+                    <img src="skeleton.png" alt="Bob swims against coral">
+                </div>
+
+                <div class="info-box-db">
+                    <p>External influences have little effect on him.</p>
+                </div>
+
+                <div class="info-box-db">
+                    <p>Because his skeleton forms a closed protective shell made of hexagonal plates. Hard as stone,
+                        light as a feather.</p>
+                </div>
+
+                <div class="img-block abstand-mittel">
+                    <img src="skeleton-side.png" alt="Bob's skeleton from the side">
+                </div>
+
+                <div class="info-box-lb abstand-gross">
+                    <p>But where and how does Bob live?</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="lifestyle">
+            <div class="intro-content">
+                <div class="info-box-lb">
+                    <p>Bob lives alone in coral reefs, algae or seaweed beds.</p>
+                </div>
+
+                <div class="img-block Bob-swims">
+                    <img src="Bob-swims.png" alt="Bob the boxfish swimming in his habitat">
+                </div>
+
+                <div class="info-box-lb abstand-gross">
+                    <p>He feeds on worms, tunicates, sponges, algae, and seaweed. To uncover prey hidden in the sand, it
+                        blows a jet of water onto the sand.</p>
+                </div>
+
+                <div class="info-box-y">
+                    <p>Now you know a lot more about Bob the boxfish.</p>
+                </div>
+
+                <div class="info-box-y abstand-mittel">
+                    <p>He may not be a world champion swimmer...<br/>
+                        ...but he's one of the coolest in the ocean.</p>
+                </div>
+                <div class="img-block abstand-gross bob-end">
+                    <img src="bob-end.png" alt="Bob the boxfish">
+                </div>
+
+            </div>
+        </section>
+    </main>
+</body>
+
+<script src="script.js"></script>
+
+</html>
